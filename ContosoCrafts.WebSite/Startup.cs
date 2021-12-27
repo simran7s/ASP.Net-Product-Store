@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
@@ -23,7 +24,10 @@ namespace ContosoCrafts.WebSite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Add new services here
             services.AddRazorPages();
+            //Transient creates a new instance of a service every time
+            services.AddTransient<JsonFileProductService>(); //lets all of asp.net know that this is a service
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

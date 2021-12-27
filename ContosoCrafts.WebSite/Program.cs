@@ -16,6 +16,7 @@ namespace ContosoCrafts.WebSite
             CreateHostBuilder(args).Build().Run();
         }
 
+        //This file just says to use Startup.cs
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
