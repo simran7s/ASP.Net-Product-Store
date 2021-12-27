@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Simran\\source\\repos\\ContosoCrafts\\ContosoCrafts.WebSite\\ContosoCrafts.WebSite.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Simran\\source\\repos\\ContosoCrafts\\ContosoCrafts.WebSite\\ContosoCrafts.WebSite.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Simran\\source\\repos\\ContosoCrafts\\ContosoCrafts.WebSite\\ContosoCrafts.WebSite.csproj",
+        "projectName": "ContosoCrafts.WebSite",
+        "projectPath": "C:\\Users\\Simran\\source\\repos\\ContosoCrafts\\ContosoCrafts.WebSite\\ContosoCrafts.WebSite.csproj",
+        "packagesPath": "C:\\Users\\Simran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simran\\source\\repos\\ContosoCrafts\\ContosoCrafts.WebSite\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Simran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://tsource.corp.taxcycle.com:8080/tfs/DefaultCollection/_packaging/Cloud_References/nuget/v3/index.json": {},
+          "http://tsource.corp.taxcycle.com:8080/tfs/DefaultCollection/_packaging/DevExpress/nuget/v3/index.json": {},
+          "http://tsource.corp.taxcycle.com:8080/tfs/DefaultCollection/_packaging/Trilogy/nuget/v3/index.json": {},
+          "http://tsource.corp.taxcycle.com:8080/tfs/DefaultCollection/_packaging/Vendors/nuget/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nE9ca5UA8TRux9qZhrBXNN2hoYhD1QwMxIVS6PRG5vBZ2bfXip/api": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
