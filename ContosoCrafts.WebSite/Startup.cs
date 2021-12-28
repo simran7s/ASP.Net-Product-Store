@@ -7,8 +7,11 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
+using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace ContosoCrafts.WebSite
 {
@@ -53,7 +56,21 @@ namespace ContosoCrafts.WebSite
 
             app.UseEndpoints(endpoints =>
             {
+                //i.e Maps "privacy" to privacy page
                 endpoints.MapRazorPages();
+
+                //Mapping for /products (THE HARD WAY)
+                endpoints.MapGet("/products", (context) =>
+                {
+                    //tell our App to Get the service "GetProducts()" which is of type <JsonFileProductService>. This returns all products
+                    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
+
+                    //Serializer the products into a json string that is IEnumerable of products (array of products???)
+                    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+
+                    //Return a response of JSON
+                    return context.Response.WriteAsync(json);
+                });
             });
         }
     }
