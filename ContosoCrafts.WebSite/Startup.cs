@@ -29,6 +29,8 @@ namespace ContosoCrafts.WebSite
         {
             //Add new services here
             services.AddRazorPages();
+            //Let app know we are using controllers (used in app.UseEndpoints later)
+            services.AddControllers();
             //Transient creates a new instance of a service every time
             services.AddTransient<JsonFileProductService>(); //lets all of asp.net know that this is a service
         }
@@ -58,19 +60,21 @@ namespace ContosoCrafts.WebSite
             {
                 //i.e Maps "privacy" to privacy page
                 endpoints.MapRazorPages();
+                // /Products Controller
+                endpoints.MapControllers();
 
                 //Mapping for /products (THE HARD WAY)
-                endpoints.MapGet("/products", (context) =>
-                {
-                    //tell our App to Get the service "GetProducts()" which is of type <JsonFileProductService>. This returns all products
-                    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
+                //endpoints.MapGet("/products", (context) =>
+                //{
+                //    //tell our App to Get the service "GetProducts()" which is of type <JsonFileProductService>. This returns all products
+                //    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
 
-                    //Serializer the products into a json string that is IEnumerable of products (array of products???)
-                    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+                //    //Serializer the products into a json string that is IEnumerable of products (array of products???)
+                //    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
 
-                    //Return a response of JSON
-                    return context.Response.WriteAsync(json);
-                });
+                //    //Return a response of JSON
+                //    return context.Response.WriteAsync(json);
+                //});
             });
         }
     }
